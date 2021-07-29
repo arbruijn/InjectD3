@@ -24,6 +24,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <fstream>
+#include <string>
 
 #include "Win32App.h"
 #include "Configuration.h"
@@ -91,7 +92,8 @@ void ParseConfig(const char* filename)
 	int i;
 	for (;;)
 	{
-		stream >> hack;
+		//stream >> hack;
+		std::getline(stream, hack);
 		if (stream.eof())
 			break;
 
